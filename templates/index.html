@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Герои Dota 2</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Рейтинг героев Dota 2</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Герой</th>
+                <th>Роль</th>
+                <th>Win Rate (%)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for hero in heroes %}
+            <tr>
+                <td>{{ hero.name }}</td>
+                <td>{{ hero.role }}</td>
+                <td>{{ hero.win_rate }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
